@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.localbusiness.MainActivity">
+
+    <!--Main LinearLayout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Main photo&title container-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/main_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_background" />
+
+            <TextView
+                style="@style/headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/main_picture"
+                android:text="Private\nAircraft Charter" />
+
+        </RelativeLayout>
+        <!--End of main photo&title container-->
+
+        <!--About us section title-->
+        <TextView
+            style="@style/title"
+            android:text="About us" />
+
+        <!--About us section text-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="15dp"
+            android:text="@string/description" />
+
+        <!--Divider-->
+        <LinearLayout style="@style/divider"></LinearLayout>
+
+        <!--Contact section title-->
+        <TextView
+            style="@style/title"
+            android:text="Contact" />
+
+        <!--Contact details container-->
+        <LinearLayout
+            style="@style/section"
+            android:orientation="horizontal">
+
+            <!-- 1st Column -->
+            <LinearLayout style="@style/contact_column">
+
+                <LinearLayout style="@style/contact_container">
+
+                    <ImageView
+                        style="@style/contact_image"
+                        android:src="@mipmap/ic_address" />
+
+                    <TextView
+                        style="@style/contact_text"
+                        android:autoLink="map"
+                        android:text="2692 Central Avenue\nJersey City, NJ" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/contact_container">
+
+                    <ImageView
+                        style="@style/contact_image"
+                        android:src="@mipmap/ic_telephone" />
+
+                    <TextView
+                        style="@style/contact_text"
+                        android:autoLink="phone"
+                        android:text="201-424-2615" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--End of 1st Column -->
+
+            <!-- 2nd Column -->
+            <LinearLayout style="@style/contact_column">
+
+                <LinearLayout style="@style/contact_container">
+
+                    <ImageView
+                        style="@style/contact_image"
+                        android:src="@mipmap/ic_opening_hours" />
+
+                    <TextView
+                        style="@style/contact_text"
+                        android:text="We are open 24/7" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/contact_container">
+
+                    <ImageView
+                        style="@style/contact_image"
+                        android:src="@mipmap/ic_website" />
+
+                    <TextView
+                        style="@style/contact_text"
+                        android:autoLink="web"
+                        android:text="jet4charter.com" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--End of 2nd column-->
+
+        </LinearLayout>
+        <!--End of contact details container-->
+
+    </LinearLayout>
+    <!--End of main LinearLayout-->
+
+</ScrollView>
+
